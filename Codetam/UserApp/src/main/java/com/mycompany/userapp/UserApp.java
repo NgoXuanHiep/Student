@@ -21,7 +21,11 @@ public class UserApp {
         }
 
         public void updateEmail(String newEmail) {
-            this.email = newEmail;
+            if (newEmail.contains("@")) {
+                this.email = newEmail;
+            } else {
+                System.out.println("Invalid email format.");
+            }
         }
     }
 }
