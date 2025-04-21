@@ -1,12 +1,11 @@
-
-import com.mycompany.userapp.User;
 import junit.framework.TestCase;
 
 public class UserTest extends TestCase {
 
     public void testUserConstructor() {
         User user = new User("user1", "user1@cmucs246.com");
-        assertEquals("user1", user.getEmail());
+        // So sánh đúng với email, vì bạn đang gọi getEmail()
+        assertEquals("user1@cmucs246.com", user.getEmail());
     }
 
     public void testSetEmail() {
